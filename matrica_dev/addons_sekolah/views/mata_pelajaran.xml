@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="view_mata_pelajaran_tree" model="ir.ui.view">
+            <field name="name">view.mata.pelajaran.tree</field>
+            <field name="model">sekolah.mata.pelajaran</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nm_matapelajaran"/>
+                    <field name="jurusan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_mata_pelajaran_form" model="ir.ui.view">
+            <field name="name">view.mata.pelajaran.form</field>
+            <field name="model">sekolah.mata.pelajaran</field>
+            <field name="arch" type="xml">
+                <form string="kelas">
+                    <sheet>
+                        <group>
+                            <field name="nm_matapelajaran"/>
+                            <field name="jurusan"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_mata_pelajaran" model="ir.actions.act_window">
+            <field name="name">Mata Pelajaran</field>
+            <field name="res_model">sekolah.mata.pelajaran</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

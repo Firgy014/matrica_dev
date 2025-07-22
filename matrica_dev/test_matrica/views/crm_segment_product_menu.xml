@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem 
+            id="menu_crm_segment_product" 
+            name="Segment Product" 
+            parent="crm.crm_menu_config" 
+            action="action_crm_segment_product" 
+            sequence="999"/>
+    </data>
+</odoo>

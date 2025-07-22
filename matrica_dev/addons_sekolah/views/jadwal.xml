@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="view_jadwal_tree" model="ir.ui.view">
+            <field name="name">view.jadwal.tree</field>
+            <field name="model">sekolah.jadwal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="hari"/>
+                    <field name="kelas_id"/>
+                    <field name="jam"/>
+                    <field name="mata_pelajaran_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_jadwal_form" model="ir.ui.view">
+            <field name="name">view.jadwal.form</field>
+            <field name="model">sekolah.jadwal</field>
+            <field name="arch" type="xml">
+                <form string="Guru">
+                    <sheet>
+                        <group>
+                            <field name="hari"/>
+                            <field name="kelas_id"/>
+                            <field name="jam"/>
+                            <field name="mata_pelajaran_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_jadwal" model="ir.actions.act_window">
+            <field name="name">Jadwal</field>
+            <field name="res_model">sekolah.jadwal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

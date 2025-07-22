@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_task_progress_user,access_crm_task_progress_user,model_crm_task_progress,,1,1,1,1
+access_crm_segment_product,access_crm_segment_product,model_crm_segment_product,,1,1,1,1

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="view_crm_lead_form_inherit_segment" model="ir.ui.view">
+            <field name="name">crm.lead.form.segment.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[field[@name='tag_ids']]/field[@name='tag_ids']" position="after">
+                    <field name="pelanggan_baru"/>
+                    <field name="segment_pelanggan"/>
+                    <field name="segment_product_id"/>
+                </xpath>
+                <xpath expr="//page[@name='lead']" position="after">
+                    <page string="Task Progress">
+                        <field name="task_progress_ids">
+                            <tree editable="bottom">
+                                <field name="task"/>
+                                <field name="deadline"/>
+                                <field name="status"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record> 
+    </data>
+
+</odoo>
